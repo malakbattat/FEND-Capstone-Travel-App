@@ -5,36 +5,28 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import fetch from 'node-fetch';
 
-// Load environment variables from .env file
 dotenv.config();
 
 // Setup empty JS object to act as endpoint for all routes
 let projectData = {};
 
-// Express to run server and routes
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Initialize the main project folder
 app.use(express.static('dist'));
 
-// Spin up the server
 const port = 8081;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-// Initialize all route with a callback function
-// GET route to return project data
 app.get('/all', (req, res) => {
   res.send(projectData);
 });
 
-// POST route to add data
 app.post('/add', (req, res) => {
   projectData = {
     temperature: req.body.temperature,

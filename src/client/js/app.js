@@ -47,10 +47,8 @@ async function handleSubmit(event) {
     const weatherData = await weatherResponse.json();
     const forecast = weatherData.data[0];
 
-    // Updating travelData with Weatherbit data
     travelData.weather = forecast.weather.description;
 
-    // Fetch image from Pixabay API
     const pixabayResponse = await fetch('/api/pixabay', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -62,10 +60,8 @@ async function handleSubmit(event) {
     const pixabayData = await pixabayResponse.json();
     const imageUrl = pixabayData.webformatURL;
 
-    // Updating travelData with Pixabay data
     travelData.imageUrl = imageUrl;
 
-    // Update the UI with fetched data
     document.getElementById('results').innerHTML = `
       <h2>Trip to ${city}, ${countryName}</h2>
       <p>Latitude: ${lat}, Longitude: ${lng}</p>
@@ -85,12 +81,10 @@ async function handleSubmit(event) {
 
 // Function to remove the trip
 function removeTrip() {
-  // Clear the travelData object
   for (let key in travelData) {
     travelData[key] = '';
   }
 
-  // Clear the UI
   document.getElementById('results').innerHTML = '';
 }
 

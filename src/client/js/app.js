@@ -1,4 +1,3 @@
-// Placeholder for travel data
 const travelData = {
   city: '',
   date: '',
@@ -51,7 +50,6 @@ async function handleSubmit(event) {
     const weatherData = await weatherResponse.json();
     const forecast = weatherData.data[0];
 
-    // Updating travelData with Weatherbit data
     travelData.weather = forecast.weather.description;
 
     // Fetch image from Pixabay API
@@ -66,7 +64,6 @@ async function handleSubmit(event) {
     const pixabayData = await pixabayResponse.json();
     const imageUrl = pixabayData.webformatURL;
 
-    // Updating travelData with Pixabay data
     travelData.imageUrl = imageUrl;
 
     // Update the UI with fetched data and show the Remove Trip button
@@ -93,7 +90,6 @@ async function handleSubmit(event) {
 
 // Function to remove the trip
 function removeTrip() {
-  // Clear the travelData object
   for (let key in travelData) {
     travelData[key] = '';
   }

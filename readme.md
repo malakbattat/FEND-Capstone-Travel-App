@@ -1,13 +1,14 @@
 # Travel App
 
 ## Project Description
-The Travel App allows users to input a location and receive relevant travel information including weather, local images, and geographic data. Users can add and remove trips, making it a handy tool for planning your next adventure.
+This project is the FEND Capstone Project: Travel App, the final project to graduate from the Front End Web Developer Nanodegree. It allows users to input a location and receive relevant travel information including weather, local images, and geographic data. Also, Users can add and remove trips.
 
 ## Features
 - **Search**: Enter a city to get geographic data.
 - **Weather Information**: Get the current weather and forecast for your destination.
 - **Local Images**: View images related to the location.
 - **Add/Remove Trips**: Easily add and remove trips for better planning.
+- **Select Trip Date**: Choose your desired travel date and see relevant information.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -20,12 +21,9 @@ The Travel App allows users to input a location and receive relevant travel info
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/travel-app.git
+    git clone https://github.com/malakbattat/FEND-Capstone-Travel-App-proj.git
     ```
 2. Navigate to the project directory:
-    ```sh
-    cd travel-app
-    ```
 3. Install dependencies:
     ```sh
     npm install
@@ -52,44 +50,43 @@ Root
 │   ├── client
 │   │   ├── index.js
 │   │   ├── js
-│   │   │   └── app.js (name will vary)
+│   │   │   └── app.js
 │   │   ├── styles
-│   │   │   └── style.scss (name will vary)
+│   │   │   └── style.scss
 │   │   └── views
 │   │       └── index.html 
 │   └── server
-│       └── server.js (name will vary)
+│       └── server.js
 └── webpack.config.js
-
 
 ## Dependencies
 ### Production Dependencies
-- `dotenv`: ^16.4.5
-- `express`: ^4.21.0
-- `jest-fetch-mock`: ^3.0.3
-- `node-fetch`: ^2.6.0
-- `supertest`: ^7.0.0
-- `webpack`: ^5.95.0
-- `webpack-cli`: ^5.1.4
+- dotenv
+- express
+- jest-fetch-mock
+- node-fetch
+- supertest
+- webpack
+- webpack-cli
 
 ### Development Dependencies
-- `@babel/core`: ^7.25.2
-- `@babel/plugin-transform-modules-commonjs`: ^7.24.8
-- `@babel/preset-env`: ^7.25.8
-- `babel-jest`: ^29.7.0
-- `babel-loader`: ^9.2.1
-- `body-parser`: ^1.20.3
-- `clean-webpack-plugin`: ^4.0.0
-- `cors`: ^2.8.5
-- `css-loader`: ^7.1.2
-- `html-webpack-plugin`: ^5.6.0
-- `jest`: ^29.7.0
-- `sass`: ^1.79.3
-- `sass-loader`: ^16.0.2
-- `style-loader`: ^4.0.0
-- `webpack-dev-server`: ^5.1.0
-- `workbox-webpack-plugin`: ^7.1.0
-- `supertest`: ^6.1.3
+- @babel/core
+- @babel/plugin-transform-modules-commonjs
+- @babel/preset-env
+- babel-jest
+- babel-loader
+- body-parser
+- clean-webpack-plugin
+- cors
+- css-loader
+- html-webpack-plugin
+- jest
+- sass
+- sass-loader
+- style-loader
+- webpack-dev-server
+- workbox-webpack-plugin
+- supertest
 
 ## API Integration
 - **Geonames API**
@@ -111,5 +108,3 @@ Root
 
 ### Webpack Configuration
 - Combined setup for development and production modes with dynamic loading.
-
-This README covers your app and dependencies comprehensively. Ready to share or any final touches? Let’s make it stellar!

@@ -110,4 +110,4 @@ Root
 - Combined setup for development and production modes with dynamic loading.
 
 ## Node.js Version
-- Node.js version used: **20.15.0 (Currently using 64-bit executable)**
+- Node.js version used: **20.15.0**
